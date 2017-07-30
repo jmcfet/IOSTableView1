@@ -84,11 +84,15 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="machinesDataSource.cs" />
+    <Compile Include="machinesTableController.cs" />
+    <Compile Include="machinesTableController.designer.cs">
+      <DependentUpon>machinesTableController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist" />
-    <Compile Include="MyDataSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +111,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Entitlements.plist" />
+    <BundleResource Include="Images\ab-isolator.jpg" />
+    <BundleResource Include="Images\arm-cross.jpg" />
+    <BundleResource Include="Images\chest-press.jpg" />
+    <BundleResource Include="Images\four-way-neck.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GymPal.Core\GymPal.Core.csproj">
+      <Project>{172ab207-ff9d-4045-a5a7-40362321eb62}</Project>
+      <Name>GymPal.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
